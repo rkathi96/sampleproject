@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 # Copy static website files to Nginx's HTML directory
-COPY pipeline /usr/share/nginx/html
+COPY public /usr/share/nginx/html
 
 # Expose port 80 for Nginx
 EXPOSE 80
