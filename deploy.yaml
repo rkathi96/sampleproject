@@ -1,0 +1,15 @@
+---
+pipeline:
+  stages:
+    - name: Deploy to GCP
+      container:
+        image: google/cloud-sdk:latest
+        entrypoint:
+          - "sh"
+          - "-c"
+        commands:
+          - "gcloud auth activate-service-account --key-file=path/to/service-account-key.json"
+          - "gcloud config set project <your-project-id>"
+          - "cd terraform"
+          - "terraform init"
+          - "terraform apply -auto-approve"
