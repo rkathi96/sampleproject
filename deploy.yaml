@@ -8,7 +8,7 @@ pipeline:
           - "sh"
           - "-c"
         commands:
-          - "gcloud auth activate-service-account --key-file=path/to/service-account-key.json"
+          - "gcloud auth activate-service-account --key-file=privatekey.json"
           - "gcloud config set project <your-project-id>"
           - "cd terraform"
           - "terraform init"
