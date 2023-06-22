@@ -5,7 +5,6 @@ steps:
       - '-c'
       - |
         gcloud auth activate-service-account --key-file=terraform/privatekey.json
-        gcloud config set project "manifest-truth-389718"
         cd terraform
         terraform init
         terraform apply -auto-approve
