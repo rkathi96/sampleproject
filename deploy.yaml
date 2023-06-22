@@ -6,7 +6,7 @@ steps:
       - |
         gcloud auth activate-service-account --key-file=terraform/privatekey.json
         
- - name: 'hashicorp/terraform:latest'
+  - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
     args:
       - 'init'
