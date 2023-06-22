@@ -4,7 +4,7 @@ steps:
     args:
       - '-c'
       - |
-        gcloud auth activate-service-account --key-file=C:/Users/rohit/Downloads/privatekey.json
+        gcloud auth activate-service-account --key-file=terraform/privatekey.json
         gcloud config set project $(project_id)
         cd terraform
         terraform init
